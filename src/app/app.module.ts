@@ -37,6 +37,9 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
+import { ListUserComponent } from './list-user/list-user.component';
+import { AddListUserComponent } from './add-list-user/add-list-user.component';
+import { EditListUserComponent } from './edit-list-user/edit-list-user.component';
 
 registerLocaleData(en);
 
@@ -47,6 +50,10 @@ export const appRoutes: Routes = [
   { path: 'Edit', component: YakutskPageComponent },
   { path: 'Users', component: UserListComponent },
   { path: 'UsersEdit/:id', component: UserEditComponent },
+  { path: 'List', component: ListUserComponent },
+  { path: 'List/AddList', component: AddListUserComponent },
+  { path: 'EditList/:id', component: EditListUserComponent }
+
 ];
 
 @NgModule({
@@ -61,6 +68,9 @@ export const appRoutes: Routes = [
     YakutskSiteComponent,
     UserListComponent,
     UserEditComponent,
+    ListUserComponent,
+    AddListUserComponent,
+    EditListUserComponent
   ],
   imports: [
     BrowserModule,

@@ -64,9 +64,7 @@ export class UserListComponent implements OnInit, OnDestroy {
     localStorage.setItem('task', a);
     console.log (a)
     console.log (typeof a)
-
   }
-
   ngOnDestroy() {
     this.sub.unsubscribe();
   }

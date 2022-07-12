@@ -1,10 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
-import {
-  UntypedFormGroup,
-  UntypedFormBuilder, FormBuilder, Validators
-} from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { FormGroup, FormControl } from '@angular/forms';
 interface IUser {
   id: number;
@@ -25,6 +21,7 @@ export class UserEditComponent implements OnInit {
   public myForm: FormGroup;
   public users: IUser[] = JSON.parse(localStorage.getItem('task')) ?? [];
 
+
   constructor(
     private route: ActivatedRoute,
     private fb: FormBuilder,
@@ -32,8 +29,8 @@ export class UserEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.myForm = this.fb.group({
-      name: ['Введите имя', [Validators.required, Validators.pattern(/[А-я]/)]],
-      role: ['Введите роль', [Validators.required]],
+      name: ['Введите имя', [Validators.required]],
+      role: ['Введите пароль', [Validators.required]],
       login: ['Введите логин', [Validators.required]],
       password: ['Введите пароль', [Validators.required]],
     });
