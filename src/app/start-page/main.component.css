@@ -21,36 +21,44 @@ nz-content {
 nz-footer {
   text-align: center;
 }
-.p{
-  font-family: 'Andale Mono', monospace;
-    color: black;
-    font-weight: bold;
+.p {
+  font-family: "Andale Mono", monospace;
+  color: black;
+  font-weight: bold;
 }
-.ul{
-  font-family: 'Andale Mono', monospace;
+.ul {
+  font-family: "Andale Mono", monospace;
 }
-.ul li{
-  font-family: 'Andale Mono', monospace;
+.ul li {
+  font-family: "Andale Mono", monospace;
 }
 p[nz-typography] {
   margin-bottom: 1em;
 }
-.nz-button{
+.nz-button {
   margin-right: 8px;
   margin-bottom: 12px;
-  background-color: #4682B4;
-  font-family: 'Andale Mono', monospace;
+  background-color: #4682b4;
+  font-family: "Andale Mono", monospace;
   color: white;
   font-weight: bold;
 }
-.button-menu{
+.button-menu {
   margin-right: 8px;
   margin-bottom: 12px;
-  background-color: #4682B4;
-  font-family: 'Andale Mono', monospace;
+  background-color: #4682b4;
+  font-family: "Andale Mono", monospace;
   color: white;
   font-weight: bold;
 }
-p[nz-typography] {
-  margin-bottom: 1em;
+input.ng-touched.ng-invalid {
+  border-color: red;
 }
+#userForm {
+  width: 1100px;
+  height: 50px;
+}
+[nz-form] {
+  max-width: 600px;
+}
+

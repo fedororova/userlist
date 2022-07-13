@@ -29,11 +29,9 @@ import { YakutskSiteComponent } from './yakutsk-site/yakutsk-site.component';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { ReactiveFormsModule } from '@angular/forms';
-import { UserListComponent } from './user-list/user-list.component';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzSelectModule } from 'ng-zorro-antd/select';
-import { UserEditComponent } from './user-edit/user-edit.component';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
@@ -44,12 +42,10 @@ import { EditListUserComponent } from './edit-list-user/edit-list-user.component
 registerLocaleData(en);
 
 export const appRoutes: Routes = [
-  { path: '', component: MainPageComponent },
+  { path: '', component: MainComponent },
   { path: 'City', component: YakutskSiteComponent },
   { path: 'Me', component: AboutmePageComponent },
   { path: 'Edit', component: YakutskPageComponent },
-  { path: 'Users', component: UserListComponent },
-  { path: 'UsersEdit/:id', component: UserEditComponent },
   { path: 'List', component: ListUserComponent },
   { path: 'List/AddList', component: AddListUserComponent },
   { path: 'EditList/:id', component: EditListUserComponent }
@@ -66,8 +62,6 @@ export const appRoutes: Routes = [
     YakutskPageComponent,
     AboutmePageComponent,
     YakutskSiteComponent,
-    UserListComponent,
-    UserEditComponent,
     ListUserComponent,
     AddListUserComponent,
     EditListUserComponent
